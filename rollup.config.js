@@ -5,11 +5,25 @@ export default {
 	input: ['src/index.js'],
 	output: {
 		file: 'build/index.js',
-    format: 'es',
-		sourcemap: true
+		format: 'es',
 	},
 	plugins: [
-    resolve(),
-    babel()
-  ]
+		resolve(),
+		babel({
+			presets: [
+				[
+					'@babel/preset-env',
+					{
+						targets: {
+							browsers: 'IE 11',
+						},
+					}
+				]
+			],
+			plugins: [
+				'@babel/plugin-proposal-class-properties',
+				['@babel/proposal-decorators', { decoratorsBeforeExport: true }],
+			]
+		})
+	]
 };

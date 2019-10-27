@@ -1,4 +1,5 @@
 import 'regenerator-runtime/runtime';
+
 import {html, LitElement, property} from 'lit-element';
 
 class MyElement extends LitElement {

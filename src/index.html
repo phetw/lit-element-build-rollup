@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
+
 <head lang='en'>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width'>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width'>
   <title>lit-element-build-rollup</title>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated%2Calways&features=es7%2Ces6%2Cdefault%2Ces5%2Ces2018%2Ces2017%2Ces2016%2Ces2015"></script>
   <!-- Force polyfills for testing -->
   <!-- 
   <script>
@@ -14,9 +16,11 @@
   </script>
   -->
 </head>
+
 <body>
   <my-element></my-element>
   <script src="webcomponents-loader.js"></script>
-  <script src='index.js'></script>
+  <script src='index.js' defer></script>
 </body>
+
 </html>
